@@ -51,7 +51,7 @@ def detect_faces(detector, image, min_size):
 
 
 def rotate_image(image, angle, cx, cy):
-  h, w = image.shape[0:2]
+  h, w = image.shape[:2]
   rot_mat = cv2.getRotationMatrix2D((cx, cy), angle, 1.0)
 
   # # 回転する分、すこし画像サイズを大きくする→とりあえず無効化
